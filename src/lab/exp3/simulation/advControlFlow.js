@@ -167,46 +167,34 @@ window.view = {
     	this.clearDivs()
     	var selected_loop = this.getSelectedLoop()
 		var inputValue = document.getElementById('simpleLoopInput').value
-		if (selected_loop === 'for' &&  inputValue > 20 )
+		if (selected_loop === 'for' &&  ( inputValue > 20 || inputValue < 0) )
 		{
 			alert('out of range');
 			return false;
 		}
-		if (selected_loop === 'for' &&  inputValue < 0 )
-		{
-			alert('out of range');
-			return false;
-		}
+		
 
 		if (selected_loop === 'for' && inputValue !== '' && !isNaN(model.inp) )
 		{
 			this.displayLoop('forLoopContent', 'codeContentFor1')
 		}
-		if (selected_loop === 'while' &&  inputValue > 20 )
+		if (selected_loop === 'while' && ( inputValue > 20 || input < 0) )
 		{
 			alert('out of range');
 			return false;
 		}
-		if (selected_loop === 'while' &&  inputValue < 0 )
-		{
-			alert('out of range');
-			return false;
-		}
+		
 
 		if (selected_loop === 'while' && inputValue !== '' && !isNaN(model.inp))
 		{
 			this.displayLoop('whileLoopContent', 'codeContentWhile1')
 		}
-		if (selected_loop === 'do-while' &&  inputValue > 20 )
+		if (selected_loop === 'do-while' &&  (inputValue > 20 || inputValue < 0) )
 		{
 			alert('out of range');
 			return false;
 		}
-		if (selected_loop === 'do-while' &&  inputValue < 0 )
-		{
-			alert('out of range');
-			return false;
-		}
+		
 
 		if (selected_loop === 'do-while' && inputValue !== '' && !isNaN(model.inp))
 		{
