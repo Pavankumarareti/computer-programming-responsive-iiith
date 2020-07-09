@@ -554,7 +554,7 @@ window.view = {
 		document.getElementById('buttonEdit').className += ' hide'
 		document.getElementById('buttonSave').className = 'button saveButton'
 	
-		
+		    if( environment = "arithmatic")
 			this.setEnvironment( 0, 0, 0, 0, 'arithmatic', 'a + b - c' )
 		},
 	killWhiteSpaces: function (expression) {
