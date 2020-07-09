@@ -534,6 +534,8 @@ window.view = {
 	addChangeEvent: function (id, method) {
 		var element = document.getElementById(id)
 		element.addEventListener('change', method, false)
+		
+
 	},
 	freezeInputs: function () {
 		this.disableElement('a')
@@ -542,6 +544,7 @@ window.view = {
 		this.disableElement('d')
 		document.getElementById('buttonSave').className += ' hide'
 		document.getElementById('buttonEdit').className = 'button editButton'
+		
 	},
 	deFreezeInputs: function () {
 		this.enableElement('a')
@@ -550,7 +553,10 @@ window.view = {
 		this.enableElement('d')
 		document.getElementById('buttonEdit').className += ' hide'
 		document.getElementById('buttonSave').className = 'button saveButton'
-	},
+	
+		
+			this.setEnvironment( 0, 0, 0, 0, 'arithmatic', 'a + b - c' )
+		},
 	killWhiteSpaces: function (expression) {
 			return expression.replace(/\s+/g, '')
 	},
